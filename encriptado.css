@@ -1,0 +1,329 @@
+body{
+	font-family: 'Open Sans', sans-serif;
+	font-family: 'Roboto', sans-serif;
+	font-family: 'Ubuntu', sans-serif;
+	background-color: #E6E6E6;
+}
+
+/*HEADER*/
+.Titulo{
+	font-size: 50px;
+	margin: 30px auto;
+	color: #FF0000;
+	display: block;
+	white-space: nowrap;
+	border-right: 4px solid;
+	width: 7ch;
+	height: 60px;
+	animation: typing 2s steps(7), blink .5s infinite step-end alternate;
+	overflow: hidden;
+}
+
+@keyframes typing{
+	from{ width: 0; }
+}
+@keyframes blink{
+	50%{border-color: transparent;}
+}
+/*Fin de HEADER*/
+
+/*MAIN*/
+.Insertar{
+	position: relative;
+	float: left;
+	margin: 20px 16%;
+	width: 500px;
+	height: 400px;
+	background-color: #848484;
+	border-radius: 5px;
+}
+.Insertar p{
+	margin-top: 50px;
+	font-size: 15px;
+	text-align: center;
+}
+.contenido{
+	width: 400px; 
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 46px;
+
+}
+.botones{
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	background-color: red;
+	margin-top: -53px;
+	margin-left: 450px;
+	border: 1px solid black;
+	border-radius: 50px;
+}
+.botones2{
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	background-color: blue;
+	margin-top: -47px;
+	margin-left: 410px;
+	border: 1px solid black;
+	border-radius: 50px;
+}
+.linea{
+	position: absolute;
+	width: 200px;
+	height: 3px;
+	background-color: gray;
+	margin-top: -47px;
+	margin-left: 150px;
+	border: 1px solid black;
+	border-radius: 10px;
+}
+
+textarea{
+	width: 400px;
+	height: 300px;
+	background-color: black;
+	color: #01DF01;
+	font-size: 30px;
+	border-radius: 10px;
+}
+/*Pantalla 2*/
+.Leer{
+	position: absolute;
+	
+	margin: 20px 57.5%;
+	width: 500px;
+	height: 400px;
+	background-color: #848484;
+	border-radius: 5px;
+}
+#contenido2{
+	position: absolute;
+	background-color: black;
+	width: 300px; 
+    margin-left: 46px;
+    margin-right: auto;
+    margin-top: 46px;
+    padding: 0 46px;
+    border-radius: 10px;
+    z-index: 150;
+}
+
+#contenido2 img{
+	width: 200px;
+	margin: 20px 40px;
+	z-index: 110;
+
+}
+#contenido2 p{
+	position: relative;
+	text-align: center;
+	font-size: 30px;
+	color: red;
+	padding-bottom: 40px;
+	z-index: 100;
+}
+
+.botones3{
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	background-color: red;
+	margin-top: 20px;
+	margin-left: 450px;
+	border: 1px solid black;
+	border-radius: 50px;
+}
+.botones4{
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	background-color: blue;
+	margin-top: 27px;
+	margin-left: 410px;
+	border: 1px solid black;
+	border-radius: 50px;
+}
+#encriptado{
+	position: relative;
+	margin-top: 120px;
+	margin-left: -205px;
+	font-size: 20px;
+	color: white;
+	background-color: #01DF01;
+	width: 100px;
+	height: 40px;
+	border-radius: 10px;
+	border-color: grey;
+	transition: 2s;
+}
+
+#encriptado:hover{
+	transform: scale(1.2);
+}
+#desencriptado{
+	position: absolute;
+	margin-top: 250px;
+	margin-left: -113px;
+	font-size: 20px;
+	color: white;
+	background-color: red;
+	width: 130px;
+	height: 40px;
+	border-radius: 10px;
+	border-color: grey;
+	transition: 2s;
+	z-index: 20;
+}
+
+#desencriptado:hover{
+	transform: scale(1.2);
+}
+
+#resultado{
+	position: relative;
+	margin-top: 46px;
+	margin-left: 46px;
+	border-radius: 10px;
+	width: 400px;
+	height: 300px;
+	color: #01DF01;
+	background-color: black;
+	z-index: 10;
+}
+
+
+
+#copy{
+	position: absolute;
+	margin-top: 375px;
+	margin-left: 280px;
+	font-size: 20px;
+	color: white;
+	background-color: #01DF01;
+	width: 120px;
+	height: 30px;
+	border-radius: 10px;
+	border-color: grey;
+	transition: 2s;
+}
+
+footer{
+	background-color: black;
+	position: relative;
+	margin-top: 450px;
+	color: white;
+	padding: 100.5px 0;
+	text-align: center;
+	font-size: 30px;
+}
+
+@media screen and (max-width: 480px){
+	.Titulo{
+		margin-left: 90px;
+	}
+	.Insertar{
+		margin-left: 36px;
+		width: 300px;
+		height: 400px;
+	}
+	.contenido{
+		width: 300px;
+		height: 400px;
+	}
+	.contenido p{
+		font-size: 15px;
+	}
+	#Mensaje{
+		width: 200px;
+		height: 300px;
+		margin-left: 50px;
+	}
+
+
+	.Leer{
+		margin-top: 150px;
+		margin-left: 36px;
+		width: 300px;
+		height: 400px;
+	}
+	#contenido2 img{
+		width: 100px;
+		margin-left: 48px;
+
+	}
+	#contenido2 p{
+		width: 100px;
+		margin-left: 50px;
+
+	}
+	#contenido2{
+		width: 200px;
+		height: 300px;
+		margin-left: 50px;
+		margin-top: 50px;
+		padding: 0;
+
+	}
+	#Resultado{
+		
+		width: 200px;
+		height: 300px;
+	}
+	#resultado{
+		width: 200px;
+		height: 300px;
+
+	}
+	footer{
+		margin-top: 550px;
+		margin-left: 0px;
+
+		height: 50px;
+		width: 375px;
+	}
+
+	#encriptado{
+		margin-left: 135px;
+		margin-top: 20px;
+
+	}
+	#desencriptado{
+		margin-top: 80px;
+	}
+
+	#copy{
+		margin-left: -108px;
+		margin-top: 510px;
+	}
+
+
+	.botones{
+		background-color: red;
+		margin-top: -80px;
+		margin-left: 250px;
+	}
+	.botones2{
+		background-color: blue;
+		margin-top: -72px;
+		margin-left: 200px;
+	}
+	.linea{
+		width: 100px;
+		margin-top: -73px;
+		margin-left: 80px;
+		border: 1px solid black;
+		border-radius: 10px;
+	}
+
+	.botones3{
+		margin-top: 20px;
+		margin-left: 250px;
+	}
+	.botones4{
+		margin-top: 27px;
+		margin-left: 50px;
+	}
+
+}

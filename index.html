@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Código enigma</title>
+
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="encriptado.css">
+
+
+	<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@500&family=Ubuntu&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<h1 class="Titulo">ENIGMA</h1>
+	</header>
+
+	<main>
+		<section class="Insertar">
+			<div class="contenido">
+				<textarea name="Mensaje" id="Mensaje" cols="30" rows="10" required placeholder="Escriba el mensaje aquí"></textarea>
+				<p>❌Solo minusculas y sin caracteres especiales</p>
+			</div>
+
+			<div class="botones"></div>
+			<div class="botones2"></div>
+			<div class="linea"></div>
+
+		</section>
+
+		<section class="Leer">
+			<div id="contenido2">
+				<img src="imagenes/error.png" alt="">
+				<p>Aun no hay nada!</p>
+			</div>
+			<div id="resultado">
+				<textarea name="Resultado" id="Resultado" cols="30" rows="10"></textarea>
+			</div>
+			<div class="botones3"></div>
+			<div class="botones4"></div>
+		</section>
+
+		<button onclick="encriptar()" id="encriptado">Encriptar</button>
+		<button onclick="encriptar2()" id="desencriptado">Desencriptar</button>
+		<button onclick="Copiar();" id="copy">Copiar</button>
+	</main>
+
+	<footer>
+		<p class="footer">©Kevin Vazquez Hernandez - ENIGMA</p>
+	</footer>
+
+
+
+
+	<script type="text/javascript">
+		
+		var textarea= document.querySelector("textarea");
+		var textarea2= document.querySelector("textarea");
+		let cadena = textarea.value;
+
+		function encriptar() {
+		    let cadena = textarea.value;
+		    cadena = cadena.replaceAll('e', 'enter');
+		    cadena = cadena.replaceAll('i', 'imes');
+			cadena = cadena.replaceAll('a', 'ai');
+			
+			cadena = cadena.replaceAll('o', 'ober');
+			cadena = cadena.replaceAll('u', 'ufat');
+			console.log(cadena);
+			
+			
+
+
+			if(textarea.value.length==0) {
+				document.getElementById("contenido2").style.display = "hidden";
+			}
+			else{
+				document.getElementById("contenido2").style.display = "none";
+				document.getElementById("Resultado").value = cadena;
+			}
+		}
+		
+		let cadena2 = textarea2.value;
+
+		function encriptar2(){
+			let cadena2 = textarea2.value;
+			cadena2 = cadena2.replaceAll('enter', 'e');
+			cadena2 = cadena2.replaceAll('imes', 'i');
+			cadena2 = cadena2.replaceAll('ai', 'a');
+			cadena2 = cadena2.replaceAll('ober', 'o');
+			cadena2 = cadena2.replaceAll('ufat', 'u');
+			console.log(cadena2)
+			
+
+			if(textarea.value.length==0) {
+				document.getElementById("contenido2").style.display = "hidden";
+			}
+			else{
+				document.getElementById("contenido2").style.display = "none";
+				document.getElementById("Resultado").value = cadena2;
+			}
+			
+		}
+
+
+		function Copiar(){
+			let result = document.getElementById("Resultado");
+			result.select();
+			result.setSelectionRange(0, 99999);
+			document.execCommand("copy");
+		}
+
+
+	</script>
+
+	
+</body>
+</html>
